@@ -1,6 +1,6 @@
 [![NPM](https://nodei.co/npm/youtube-finder-sync.png?downloads=true&stars=true)](https://nodei.co/npm/youtube-finder-sync/)
 
-# youtube-finder
+# youtube-finder-sync
 
 A client for connect YOUTUBE API with an application javascript. All promise-based.
 
