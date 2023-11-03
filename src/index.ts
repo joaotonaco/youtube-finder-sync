@@ -3,7 +3,17 @@ export interface ClientOptions {
   endpoint?: string;
 }
 
+export type QueryType = 'channel' | 'playlist' | 'video';
+
 export interface Params {
+  part: 'snippet' | 'id';
+  maxResults?: number;
+  q?: string;
+  type?:
+    | `${QueryType}`
+    | `${QueryType},${QueryType}`
+    | `${QueryType},${QueryType},${QueryType}`;
+  videoDuration?: 'any' | 'long' | 'medium' | 'short';
   [key: string]: any;
 }
 
@@ -36,7 +46,9 @@ export default class Client {
 
     if (params) {
       url =
-        url + '?' + new URLSearchParams({ ...params, key: this.options.key });
+        url +
+        '?' +
+        new URLSearchParams({ ...params, key: this.options.key } as any);
     }
 
     const res = await fetch(url, { headers: { Accept: 'application/json' } });

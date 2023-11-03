@@ -7,9 +7,11 @@ A client for connect YOUTUBE API with an application javascript. All promise-bas
 ## Install
 
 ```sh
-$ npm install youtube-finder-sync
-$ yarn add youtube-finder-sync
-$ pnpm add youtube-finder-sync
+npm install youtube-finder-sync
+
+yarn add youtube-finder-sync
+
+pnpm add youtube-finder-sync
 ```
 
 ## Usage
@@ -38,7 +40,7 @@ client
 
 ### Mandatory parameters
 
-```json
+```text
 part
     The part names that can be included in the parameter value are:
         - snippet
@@ -47,7 +49,7 @@ part
 
 ## Filters and additional parameters
 
-```json
+```text
 * maxResults
     Acceptable values are {0/} a 50, both inclusive. The default is 5.
 
