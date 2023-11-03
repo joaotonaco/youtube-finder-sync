@@ -1,6 +1,3 @@
-import { encode } from 'querystring';
-import request from 'superagent';
-
 export interface ClientOptions {
   key: string;
   endpoint?: string;
@@ -10,7 +7,7 @@ export interface Params {
   [key: string]: any;
 }
 
-class Client {
+export default class Client {
   options: ClientOptions;
   endpoint: string;
 
@@ -34,25 +31,19 @@ class Client {
    *
    * @private
    */
-  #request(path: string, params: Params) {
-    return new Promise((resolve, reject) => {
-      let url = this.endpoint + path;
+  async #request(path: string, params: Params) {
+    let url = this.endpoint + path;
 
-      if (params) {
-        url = url + '?' + encode(params) + '&key=' + this.options.key;
-      }
+    if (params) {
+      url =
+        url + '?' + new URLSearchParams({ ...params, key: this.options.key });
+    }
 
-      request
-        .get(url)
-        .set('Accept', 'application/json')
-        .end(function (err, res) {
-          if (err || !res.ok) {
-            reject('An error ocurred in the request ' + err);
-          }
+    const res = await fetch(url, { headers: { Accept: 'application/json' } });
 
-          resolve(res.body);
-        });
-    });
+    if (res && res.ok) {
+      return res.json();
+    }
   }
 
   /**
@@ -66,5 +57,3 @@ class Client {
     return this.#request('/search', params);
   }
 }
-
-module.exports = Client;

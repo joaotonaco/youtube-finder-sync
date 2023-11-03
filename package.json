@@ -22,11 +22,7 @@
     "url": "https://github.com/bluee-js/youtube-finder-sync/issues"
   },
   "homepage": "https://github.com/bluee-js/youtube-finder-sync#readme",
-  "dependencies": {
-    "superagent": "^8.0.0"
-  },
   "devDependencies": {
-    "@types/superagent": "^4.1.15",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   }
