@@ -28,7 +28,8 @@ const params = {
   maxResults: 5,
 };
 
-client.search(params)
+client
+  .search(params)
   .then(data => {
     // your code
   })

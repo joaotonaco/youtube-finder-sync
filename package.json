@@ -4,7 +4,10 @@
   "description": "A module for easy connection with Youtube API. Fork from youtube-finder.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "scripts": {},
+  "scripts": {
+    "build": "npm run lint && tsc",
+    "lint": "prettier . --write"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bluee-js/youtube-finder-sync.git"
