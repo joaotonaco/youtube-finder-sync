@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluee-js/youtube-finder-sync.git"
+    "url": "git+https://github.com/joaotonaco/youtube-finder-sync.git"
   },
   "keywords": [
     "youtube",
@@ -22,9 +22,9 @@
   "author": "bluey#0012",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bluee-js/youtube-finder-sync/issues"
+    "url": "https://github.com/joaotonaco/youtube-finder-sync/issues"
   },
-  "homepage": "https://github.com/bluee-js/youtube-finder-sync#readme",
+  "homepage": "https://github.com/joaotonaco/youtube-finder-sync#readme",
   "devDependencies": {
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
