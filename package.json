@@ -4,6 +4,9 @@
   "description": "A module for easy connection with Youtube API. Fork from youtube-finder.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "npm run lint && tsc",
     "lint": "prettier . --write"
